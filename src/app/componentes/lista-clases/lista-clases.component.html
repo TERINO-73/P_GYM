@@ -1,0 +1,23 @@
+<div class="container mt-4">
+    <h2 class="text-center">Listado de Clases</h2>
+    <table class="table table-striped mt-3">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nombre</th>
+          <th>Información</th>
+          <th>Día y Hora</th>
+          <th>Personas Apuntadas</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (clase of listaClases; track clase.id) {
+          <tr>
+            <td>{{ clase.nombre }}</td>
+            <td>{{ clase.informacion }}</td>
+            <td>{{ clase.diahora }}</td>
+            <td>{{ clase.numerogente }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
