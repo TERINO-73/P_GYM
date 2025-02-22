@@ -1,0 +1,118 @@
+h1, h2 {
+    text-align: center;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Sección de información principal */
+.text-center.p-4.bg-light.rounded {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Galería de fotos */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.col-md-4 img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.col-md-4 img:hover {
+    transform: scale(1.05);
+}
+
+/* Características del gimnasio */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #007bff;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 80%;
+    font-size: 18px;
+}
+
+/* Actividades y cursos */
+.col-md-4 p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Botón de tarifas */
+.btn-info {
+    background-color: #17a2b8;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+/* Footer */
+footer {
+    background: #343a40;
+    color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+.btn-light {
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid #007bff;
+    color: #007bff;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.btn-light:hover {
+    background-color: #007bff;
+    color: white;
+}
