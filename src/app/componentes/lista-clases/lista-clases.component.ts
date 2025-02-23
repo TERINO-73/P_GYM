@@ -27,9 +27,9 @@ export class ListaClasesComponent {
 
       
 
-  borrar(id: number) {
+  borrar(id: number ,nombre:string) {
     //Confirmacion
-    if (confirm("Are you sure you want to delete this owner with id " + id + "?")) {
+    if (confirm("Estas seguro de que quieres borrar la clase " + nombre + "?")) {
       this.peticion.borrarClase(id).subscribe(datos => {
         console.log("Tamos en el borrar", datos);
         this.listaClases = datos;
