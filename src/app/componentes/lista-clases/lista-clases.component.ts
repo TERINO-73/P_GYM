@@ -15,41 +15,26 @@ import { CommonModule } from '@angular/common';
 export class ListaClasesComponent {
   textoBoton:string = "Anadir";
   public listaClases: Clase[] = [];
-  public form :FormGroup
 
   constructor(private peticion: ServiciosService, private ruta: Router, private route: ActivatedRoute,private fb:FormBuilder) {
     this.peticion.listarClases().subscribe(datos => {
       console.log("Tamos en el constructor", datos);
       this.listaClases = datos;
     });
-    this.form = this.fb.group({
-      //Declaramos los diferentes campos del formulario
-              id: this.fb.control(-1),
-            dni: this.fb.control('',[Validators.required,Validators.minLength(9)]),
-            nombre: this.fb.control('',[Validators.required,Validators.minLength(1)]),
-            apellidos:this.fb.control('',[Validators.required,Validators.minLength(1)]),
-          });
-          this.textoBoton = "AÑADIR";
+    
   }
 
-  ngOnInit() {
 
-  }
+      
 
-  borrar(id: number, nombre: string) {
-    if (confirm("¿Estas seguro de borrar a " + nombre + "?")) {
-      this.peticion.borrarPersona(id).subscribe((daticos: any) => {
-        console.log("Tamos en el borrar", daticos);
+  borrar(id: number) {
+    //Confirmacion
+    if (confirm("Are you sure you want to delete this owner with id " + id + "?")) {
+      this.peticion.borrarClase(id).subscribe(datos => {
+        console.log("Tamos en el borrar", datos);
+        this.listaClases = datos;
       });
     }
   }
-  anadeClase(){
 
-  }
-  editarClase(){
-
-  }
-  onSubmit(){
-
-  }
 }
