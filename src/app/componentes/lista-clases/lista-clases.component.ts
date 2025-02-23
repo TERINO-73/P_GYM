@@ -4,14 +4,13 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Clase } from '../../modelos/clase';
 import {ReactiveFormsModule,FormGroup, FormBuilder, Validators} from '@angular/forms'
 import { CommonModule } from '@angular/common';
-import { ClasesFormComponent } from '../clases-form/clases-form.component';
 
 
 @Component({
   selector: 'app-lista-clases',
   templateUrl: './lista-clases.component.html',
   styleUrls: ['./lista-clases.component.css'],
-  imports:[ReactiveFormsModule, RouterModule, CommonModule,ClasesFormComponent]
+  imports:[ReactiveFormsModule, RouterModule, CommonModule]
 })
 export class ListaClasesComponent {
   textoBoton:string = "Anadir";
