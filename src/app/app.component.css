@@ -1,0 +1,36 @@
+/* Navbar gris oscuro */
+.custom-navbar {
+    background-color: #004695 !important;
+    padding: 10px 0;
+  }
+  
+  /* Enlaces del menú */
+  .custom-link {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  /* Efecto hover naranja */
+  .custom-link:hover {
+    color: #1e1e1e !important;
+    background-color: #ffaa00 !important;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  /* Ajuste para dropdown */
+  .dropdown-menu {
+    background-color: #2b2b2b;
+    border: none;
+  }
+  
+  .dropdown-item {
+    color: #ffffff !important;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #ff7300 !important;
+    color: #1e1e1e !important;
+  }
+  
