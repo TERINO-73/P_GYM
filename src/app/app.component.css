@@ -2,6 +2,8 @@
 .custom-navbar {
     background-color: #004695 !important;
     padding: 10px 0;
+    border-radius: 15px; /* Ajusta este valor según lo redondeado que lo quieras */
+    margin: 10px; /* Añade un pequeño margen para que se vea mejor */
   }
   
   /* Enlaces del menú */
@@ -21,7 +23,7 @@
   
   /* Ajuste para dropdown */
   .dropdown-menu {
-    background-color: #2b2b2b;
+    background-color: #002958;
     border: none;
   }
   
@@ -32,5 +34,6 @@
   .dropdown-item:hover {
     background-color: #ff7300 !important;
     color: #1e1e1e !important;
-  }
+}
+
   
