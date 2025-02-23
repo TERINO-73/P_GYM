@@ -28,18 +28,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `clases` (
-  `ID` int(11) NOT NULL,
-  `Nombre` varchar(100) NOT NULL,
-  `Informacion` text DEFAULT NULL,
-  `DiaHora` datetime NOT NULL,
-  `NumeroGente` int(11) DEFAULT 0
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `informacion` text DEFAULT NULL,
+  `diahora` varchar(50) NOT NULL,
+  `numerogente` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `clases`
 --
 
-INSERT INTO `clases` (`ID`, `Nombre`, `Informacion`, `DiaHora`, `NumeroGente`) VALUES
+INSERT INTO `clases` (`id`, `nombre`, `informacion`, `diahora`, `numerogente`) VALUES
 (1, 'Clase de Zumba', 'Probando a crear una clase. A ver si se ve en angular', '2025-02-16 20:29:23', 0);
 
 -- --------------------------------------------------------
@@ -49,12 +49,12 @@ INSERT INTO `clases` (`ID`, `Nombre`, `Informacion`, `DiaHora`, `NumeroGente`) V
 --
 
 CREATE TABLE `usuarios` (
-  `ID` int(11) NOT NULL,
-  `NombreApellidos` varchar(255) NOT NULL,
-  `DNI` varchar(20) NOT NULL,
-  `Tarifa` varchar(50) NOT NULL,
-  `Privilegios` tinyint(1) DEFAULT 0,
-  `ClaseID` int(11) DEFAULT NULL
+  `id` int(11) NOT NULL,
+  `nombreapellidos` varchar(255) NOT NULL,
+  `dni` varchar(20) NOT NULL,
+  `tarifa` varchar(50) NOT NULL,
+  `privilegios` tinyint(1) DEFAULT 0,
+  `claseid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -65,15 +65,15 @@ CREATE TABLE `usuarios` (
 -- Indices de la tabla `clases`
 --
 ALTER TABLE `clases`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`ID`),
-  ADD UNIQUE KEY `DNI` (`DNI`),
-  ADD KEY `ClaseID` (`ClaseID`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `dni` (`dni`),
+  ADD KEY `claseid` (`claseid`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -83,13 +83,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `clases`
 --
 ALTER TABLE `clases`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -99,7 +99,7 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`ClaseID`) REFERENCES `clases` (`ID`) ON DELETE SET NULL;
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`claseid`) REFERENCES `clases` (`id`) ON DELETE SET NULL;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

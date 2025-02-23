@@ -23,12 +23,11 @@
           <td>{{ clase.informacion }}</td>
           <td>{{ clase.diahora }}</td>
           <td>{{ clase.numerogente }}</td>
-          <td><button>Editar</button></td>
+          <td><button routerLink="../+form-Clases/{{clase.id}}">Editar</button></td>
           <td><button (click)="borrar(clase.id,clase.nombre)">Borrar</button></td>
         </tr>
       }
     </tbody>
   </table>
 </div>
-<app-clases-form></app-clases-form>
 

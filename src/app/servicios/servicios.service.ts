@@ -31,10 +31,11 @@ export class ServiciosService {
     return this.http.post<Clase>(this.url, body);
   }
   modificaClase(clase:Clase){
-    let body = JSON.stringify({
-      servicio: '  modificarUsuario',
+    let body = JSON.parse(JSON.stringify({
+      servicio: 'modificarClase',
       clase: clase
-    });
+    }));
+    console.log("MOD",body);
     return this.http.post<Clase>(this.url, body);
   }
 

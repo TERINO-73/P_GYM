@@ -2,6 +2,6 @@ export interface Clase {
     id: number;
     nombre: string;
     informacion: string;
-    diahora: Date;
+    diahora: string;
     numerogente: number;
 }
