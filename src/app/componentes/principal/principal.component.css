@@ -1,18 +1,24 @@
+/* Asegurar que el body y html ocupen toda la altura de la ventana */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 h1, h2 {
     text-align: center;
 }
 
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-    text-align: center;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    max-width: 1000px;
     margin: auto;
     padding: 20px;
 }
@@ -40,6 +46,26 @@ body {
 }
 
 /* Galería de fotos */
+#carouselExampleIndicators {
+    max-width: 800px; /* Ajusta este valor según el tamaño que quieras */
+    margin: 0 auto; /* Centra el carrusel */
+}
+
+.carousel-item img {
+    width: 100%; /* Cambia este valor según tus necesidades */
+    height: 500px; /* Puedes ajustar la altura según lo desees */
+    object-fit: cover; /* Esto mantiene la imagen en proporción sin estirarse */
+    margin: 0 auto; /* Centra la imagen */
+}
+
+/* Estilo para las flechas del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Asegura que las flechas no se superpongan */
+}
+
 .row {
     display: flex;
     justify-content: center;
@@ -47,13 +73,13 @@ body {
     margin-top: 20px;
 }
 
-.col-md-4 img {
+.col-md-3 img {
     width: 100%;
     border-radius: 10px;
     transition: transform 0.3s;
 }
 
-.col-md-4 img:hover {
+.col-md-3 img:hover {
     transform: scale(1.05);
 }
 
@@ -64,27 +90,35 @@ ul {
 }
 
 ul li {
-    background: #007bff;
-    color: white;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-    width: 80%;
+    background: none; /* Si quieres mantener el fondo azul, pon #007bff */
+    color: black; /* Cambiar color si es necesario */
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; /* Dejar que Bootstrap maneje los anchos */
     font-size: 18px;
 }
 
-.icono {
-    width: 50px; /* Tamaño fijo */
-    height: auto; /* Mantiene la proporción */
+/* Estilos específicos para características */
+.caracteristica {
+    display: flex;
+    align-items: center;
 }
 
+.caracteristica .icono {
+    width: 50px;
+    height: auto;
+}
 
 /* Actividades y cursos */
-.col-md-4 p {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 18px;
+.actividad img.actividad-img {
+    width: 100%;  /* Ajustar para que las imágenes no se reduzcan más de lo necesario */
+    max-width: 400px; /* Puedes ajustar el tamaño máximo */
+    display: block;
+    margin: 0 auto;
 }
 
 /* Botón de tarifas */
@@ -101,16 +135,19 @@ ul li {
     background-color: #138496;
 }
 
-/* Footer */
+/* Eliminamos el contenedor del footer */
 footer {
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
     background: #343a40;
     color: white;
     padding: 20px 0;
-    margin-top: 30px;
+    margin-top: auto;  /* Esto empuja el footer al fondo */
+    text-align: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
+/* Asegúrate de que el footer no se sobreponga con el contenido */
 footer a {
     color: #f8f9fa;
     text-decoration: none;
