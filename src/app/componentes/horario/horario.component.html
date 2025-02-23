@@ -1,0 +1,18 @@
+<div id="horarioSection" [@fadeIn] *ngIf="isVisible" class="horario-container">
+    <h2>Horario Semanal</h2>
+    <div class="horario-grid">
+      @for (dia of diasSemana; track $index) {
+        <div class="dia">
+          <h3>{{ dia }}</h3>
+          @for (clase of horario; track $index) {
+            @if (clase.dia === dia) {
+              <div class="clase">
+                <p><strong>{{ clase.clase }}</strong></p>
+                <span class="hora">{{ clase.hora }}</span>
+              </div>
+            }
+          }
+        </div>
+      }
+    </div>
+  </div>
