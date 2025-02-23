@@ -5,7 +5,7 @@ import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-principal',
-  imports:[CommonModule,HorarioComponent],
+  imports:[CommonModule, HorarioComponent],
   templateUrl: './principal.component.html',
   styleUrls: ['./principal.component.css']
 })
