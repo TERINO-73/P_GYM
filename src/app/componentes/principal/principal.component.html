@@ -1,16 +1,18 @@
 <div class="container mt-4">
     <!-- Sección de información principal -->
-    <div class="text-center p-4 bg-light rounded" style="background-image: url('assets/portada.jpg'); background-size: cover; background-position: center;">
-        <h1>Gimnasio Provisional</h1>
-        <p class="lead">"Tu esfuerzo, tu recompensa"</p>
-        <p><strong>Teléfono:</strong> 955 47 82 94</p>
-        <p><strong>Email:</strong> contacto&#64;gimnasiofake.com</p>
-        <p><strong>Dirección:</strong> Avenida de la Calle Falsa, 123</p> 
-        <p><strong>Horario:</strong></p>
-        <p>Lunes - Viernes: 7:00 - 22:00</p>
-        <p>Sábados: 8:00 - 21:00</p>
-        <p>Domingos y festivos: 9:00 - 20:00</p>
-        <button class="btn btn-primary">Registrarse</button>
+    <div class="info-section">
+        <div class="overlay">
+            <h1>Gimnasio Provisional</h1>
+            <p class="lead">"Tu esfuerzo, tu recompensa"</p>
+            <p><strong>Teléfono:</strong> 955 47 82 94</p>
+            <p><strong>Email:</strong> contacto&#64;gimnasiofake.com</p>
+            <p><strong>Dirección:</strong> Avenida de la Calle Falsa, 123</p> 
+            <p><strong>Horario:</strong></p>
+            <p>Lunes - Viernes: 7:00 - 22:00</p>
+            <p>Sábados: 8:00 - 21:00</p>
+            <p>Domingos y festivos: 9:00 - 20:00</p>
+            <button class="btn btn-primary">Registrarse</button>
+        </div>
     </div>
     
     <!-- Galería de fotos -->
@@ -45,41 +47,33 @@
     <!-- Sección de características -->
     <div class="mt-5">
         <h2 class="text-center">Características del Gimnasio</h2>
-        <ul>
-            <li>
-                <img src="assets/iconos/superficie.svg" class="icono" width="5%" alt="Superficie">
-                <span>
-                    <strong>Superficie total</strong>
-                    <span>
-                        <p>
-                            Más de 8000m2
-                        </p>
-                    </span>
-                </span>
-            </li>
-            <li>
-                <img src="assets/iconos/fitness.svg" class="icono" width="5%" alt="Superficie">
-                <span>
-                    <strong>Sala fitness</strong>
-                    <span>
-                        <p>
-                            523m2
-                        </p>
-                    </span>
-                </span>
-            </li>
-            <li>
-                <img src="assets/iconos/salas.svg" class="icono" width="5%" alt="Superficie">
-                <span>
-                    <strong>Número de salas</strong>
-                    <span>
-                        <p>
-                            5 salas para actividades dirigidas, 1 terraza al aire libre, 1 pista de pádel y 1 pista de tenis.
-                        </p>
-                    </span>
-                </span>
-            </li>
-        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center mb-3">
+                    <img src="assets/iconos/superficie.svg" class="icono me-3">
+                    <div>
+                        <h4>Superficie total</h4>
+                        <p>Más de 8000m2</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-center mb-3">
+                    <img src="assets/iconos/fitness.svg" class="icono me-3">
+                    <div>
+                        <h4>Sala fitness</h4>
+                        <p>523m2</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-center mb-3">
+                    <img src="assets/iconos/salas.svg" class="icono me-3">
+                    <div>
+                        <h4>Número de salas</h4>
+                        <p>5 salas para actividades dirigidas, 1 terraza al aire libre, 1 pista de pádel y 1 pista de tenis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <!-- Actividades y cursos -->
