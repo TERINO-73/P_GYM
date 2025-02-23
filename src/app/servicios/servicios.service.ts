@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment.development';
 })
 export class ServiciosService {
 
-  private url = environment.API_URL_jesus;
+  private url = environment.API_URL_ale;
 
   constructor(private http: HttpClient) { }
 
