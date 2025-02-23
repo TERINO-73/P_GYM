@@ -1,33 +1,24 @@
-<!-- Botón para ver lista de clases -->
-<!--<div class="text-center mt-4">
-  <button class="btn btn-secondary" [routerLink]="['/lista-clases']">Ver Lista de Clases</button>
-</div>-->
+<div class="container mt-5">
+  <h2 class="text-center text-gradient font-weight-bold mb-5">Listado de Clases</h2>
 
-<div class="container mt-4">
-  <h2 class="text-center">Listado de Clases</h2><br><button>Anade Clase</button>
-  <table class="table table-striped mt-3">
-    <thead class="thead-dark">
+  <table class="table table-hover table-bordered mt-3 shadow-xl">
+    <thead class="thead-gradient text-white">
       <tr>
-        <th>Nombre</th>
-        <th>Información</th>
-        <th>Día y Hora</th>
-        <th>Personas Aputadas</th>
-        <th>Editar</th>
-        <th>Borrar</th>
+        <th class="text-center">Nombre</th>
+        <th class="text-center">Información</th>
+        <th class="text-center">Día y Hora</th>
+        <th class="text-center">Personas Apuntadas</th>
       </tr>
     </thead>
     <tbody>
       @for (clase of listaClases; track clase.id) {
-        <tr>
-          <td>{{ clase.nombre }}</td>
-          <td>{{ clase.informacion }}</td>
-          <td>{{ clase.diahora }}</td>
-          <td>{{ clase.numerogente }}</td>
-          <td><button routerLink="../+form-Clases/{{clase.id}}">Editar</button></td>
-          <td><button (click)="borrar(clase.id,clase.nombre)">Borrar</button></td>
+        <tr class="table-row">
+          <td class="text-center">{{ clase.nombre }}</td>
+          <td class="text-center">{{ clase.informacion }}</td>
+          <td class="text-center">{{ clase.diahora }}</td>
+          <td class="text-center">{{ clase.numerogente }}</td>
         </tr>
       }
     </tbody>
   </table>
 </div>
-

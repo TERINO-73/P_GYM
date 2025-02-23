@@ -4,6 +4,7 @@
     border-radius: 10px;
     text-align: center;
     margin-top: 50px;
+    animation: fadeIn 1s ease-in-out;
   }
   
   .horario-grid {

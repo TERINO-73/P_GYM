@@ -1,11 +1,12 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { HorarioComponent } from '../horario/horario.component';
 import { CommonModule } from '@angular/common';
+import { TarifasComponent } from '../tarifas/tarifas.component';
 import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-principal',
-  imports:[CommonModule, HorarioComponent],
+  imports:[CommonModule, HorarioComponent,TarifasComponent],
   templateUrl: './principal.component.html',
   styleUrls: ['./principal.component.css']
 })
