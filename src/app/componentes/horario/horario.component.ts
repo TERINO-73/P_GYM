@@ -1,15 +1,24 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-horario',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './horario.component.html',
-  styleUrls: ['./horario.component.css']
+  styleUrls: ['./horario.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      state('void', style({ opacity: 0 })),
+      transition(':enter', [
+        animate('500ms ease-in', style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class HorarioComponent {
-  isVisible = false;
+  isVisible = true;
   diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
   horario = [
     { dia: 'Lunes', hora: '08:00 - 09:00', clase: 'Yoga' },
